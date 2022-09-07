@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torchvision
 from torchvision import transforms
-torch.__version__
+print(torch.__version__)
 
 
 transform = transforms.Compose([
@@ -135,5 +135,5 @@ for i in range(epoch):
         g_epoch_loss /= count
         D_loss.append(d_epoch_loss)  
         G_loss.append(g_epoch_loss)  
-        print('Epoch:',epoch)
+        print('Epoch:',i)
         img_plot(g,test_input)
